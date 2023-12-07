@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="slider-container">
+      <div id="slider"></div>
+      <div id="buttons-container">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+        <button onclick="startAutoPlay()">Play</button>
+        <button onclick="stopAutoPlay()">Stop</button>
+        <button onclick="setSpeed(6)">1x 6s</button>
+        <button onclick="setSpeed(4)">2x 4s</button>
+        <button onclick="setSpeed(2)">3x 2s</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
