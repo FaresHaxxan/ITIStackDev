@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Elements</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      meter {
+        width: 200px;
+      }
+
+      progress {
+        width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Semantic Elements Example</h1>
+
+    <p>
+      Meeting scheduled for
+      <time datetime="2023-12-09T15:30">3:30 PM</time> today.
+    </p>
+
+    <p>Storage usage: <meter value="60" min="0" max="100">60%</meter></p>
+
+    <p>This is a <mark>highlighted</mark> word in a sentence.</p>
+
+    <label for="file">Uploading file:</label>
+    <progress id="file" value="50" max="100">50%</progress>
+  </body>
+</html>
