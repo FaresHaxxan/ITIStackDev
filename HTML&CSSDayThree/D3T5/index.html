@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <style>
+      body {
+        margin: 2rem;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      header {
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+      }
+
+      .slider-container {
+        display: flex;
+        transition: transform 0.1s linear;
+        animation: slideAnimation 4s infinite;
+      }
+
+      .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      @keyframes slideAnimation {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-100%);
+        }
+        45% {
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(-200%);
+        }
+        70% {
+          transform: translateX(-200%);
+        }
+        75% {
+          transform: translateX(-300%);
+        }
+        95%,
+        100% {
+          transform: translateX(-300%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="slider-container">
+        <div class="slide">
+          <img src="https://placekitten.com/1200/400" alt="Slide 1" />
+        </div>
+        <div class="slide">
+          <img src="https://placekitten.com/1200/401" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="https://placekitten.com/1200/402" alt="Slide 3" />
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

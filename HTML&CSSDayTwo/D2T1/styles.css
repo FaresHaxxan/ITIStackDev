@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+circle {
+    fill: lightblue;
+    stroke: black;
+    stroke-width: 2;
+    cursor: pointer;
+}
+  
+circle:hover {
+    fill: lightgreen;
+    stroke: darkgreen;
+    stroke-width: 4;
+}
+  
+circle:active {
+    fill: orange;
+    stroke: red;
+    stroke-width: 4;
+}
+  

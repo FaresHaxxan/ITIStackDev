@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiger Animation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      .columns-container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+      }
+
+      .column {
+        width: 48%;
+        overflow: hidden;
+      }
+
+      .tiger-container {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .tiger {
+        width: 100%;
+        height: auto;
+        transform-origin: left center;
+        transition: transform 1s ease-in-out;
+      }
+
+      .column:hover .tiger {
+        transform: translateX(100%) rotateY(180deg);
+      }
+
+      @keyframes moveAndRotate {
+        0%,
+        100% {
+          transform: translateX(0) rotateY(0);
+        }
+        50% {
+          transform: translateX(100%) rotateY(180deg);
+        }
+      }
+
+      .animation-image {
+        animation: moveAndRotate 4s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Columns Container -->
+    <div class="columns-container">
+      <!-- Column 1 with Transition Effect -->
+      <div class="column">
+        <div class="tiger-container">
+          <img src="Images/tiger.gif" alt="Tiger Image" class="tiger" />
+        </div>
+      </div>
+
+      <!-- Column 2 with Animation Effect -->
+      <div class="column">
+        <div class="tiger-container">
+          <img
+            src="Images/tiger.gif"
+            alt="Tiger Image"
+            class="tiger animation-image"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Effects</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .columns-container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+      }
+
+      .column {
+        width: 48%;
+        overflow: hidden;
+      }
+
+      .image-container {
+        overflow: hidden;
+      }
+
+      /* Transition Effect */
+      .transition-image {
+        width: 50%;
+        height: auto;
+        transition: transform 0.3s, width 0.3s, height 0.3s;
+      }
+
+      .transition-image:hover {
+        transform: rotate(45deg);
+        width: 70%;
+        height: auto;
+      }
+
+      /* Animation Effect */
+      .animation-image {
+        width: 50%;
+        height: auto;
+        animation: rotateAndMove 4s infinite;
+      }
+
+      @keyframes rotateAndMove {
+        0% {
+          transform: rotate(0) translateX(0);
+        }
+        50% {
+          transform: rotate(360deg) translateX(100px);
+        }
+        100% {
+          transform: rotate(720deg) translateX(200px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Columns Container -->
+    <div class="columns-container">
+      <!-- Column 1 with Transition Effect -->
+      <div class="column">
+        <div class="image-container">
+          <img
+            src="Images/smiley.png"
+            alt="Transition Image"
+            class="transition-image"
+          />
+        </div>
+      </div>
+
+      <!-- Column 2 with Animation Effect -->
+      <div class="column">
+        <div class="image-container">
+          <img
+            src="Images/sad.png"
+            alt="Animation Image"
+            class="animation-image"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

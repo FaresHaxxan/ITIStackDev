@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beautiful Styles</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        max-width: 600px;
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      /* Curved Borders */
+      .curved-border {
+        border-radius: 15px;
+        border: 2px solid #3498db;
+      }
+
+      h2 {
+        color: #3498db;
+      }
+
+      p {
+        color: #555;
+      }
+
+      /* CSS3 Columns */
+      .column-text {
+        columns: 2;
+        column-gap: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Curved Borders Container -->
+    <div class="container curved-border">
+      <h2>Curved Borders</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet veniam,
+        iste perspiciatis odio consequatur quasi blanditiis molestias nobis
+        accusamus consectetur. Aliquid nulla inventore quas soluta distinctio
+        omnis iste optio at.
+      </p>
+    </div>
+
+    <!-- Custom Font Container -->
+    <div class="container">
+      <h2 style="font-family: cursive">Custom Font Container</h2>
+      <p style="font-family: cursive">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        iure, est dolorem consequatur vitae non eveniet consequuntur magni
+        repellat quas architecto incidunt minima dolor porro nulla voluptas
+        minus nisi aliquam.
+      </p>
+    </div>
+
+    <!-- CSS3 Columns Container -->
+    <div class="container column-text">
+      <h2>CSS3 Columns</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis
+        at autem ipsum est? Sapiente rerum, impedit dolorem veritatis provident
+        hic sint quae nam tenetur magnam doloribus nesciunt quo numquam
+        perspiciatis.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+        perferendis iusto tempore nesciunt eveniet ipsam ut facilis tenetur
+        fugiat maiores praesentium, earum autem voluptas iure itaque dolorem.
+        Doloremque, dolores placeat?
+      </p>
+    </div>
+  </body>
+</html>

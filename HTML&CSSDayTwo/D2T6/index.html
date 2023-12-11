@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Location on Google Maps</title>
+  </head>
+  <body>
+    <h1>Show Location on Google Maps</h1>
+
+    <button id="getLocationBtn">Get My Location</button>
+
+    <script>
+      document
+        .getElementById("getLocationBtn")
+        .addEventListener("click", function () {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              function (position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                var mapUrl =
+                  "https://www.google.com/maps?q=" + latitude + "," + longitude;
+                window.open(mapUrl, "_blank");
+              },
+              function (error) {
+                console.error("Error getting location:", error.message);
+                alert("Error getting your location. Please try again.");
+              }
+            );
+          } else {
+            alert("Geolocation is not supported by your browser.");
+          }
+        });
+    </script>
+  </body>
+</html>
