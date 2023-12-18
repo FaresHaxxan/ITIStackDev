@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      class MathOperations {
+        // Static method
+        static add(x, y) {
+          return x + y;
+        }
+
+        // Static method
+        static multiply(x, y) {
+          return x * y;
+        }
+      }
+
+      // Calling static methods
+      console.log(MathOperations.add(5, 3)); // Output: 8
+      console.log(MathOperations.multiply(2, 4)); // Output: 8
+
+      /*
+      Here are some of the effects of using strict mode:
+      Variable Declaration
+      Assignment to Read-Only Properties
+      Assignment to Undeclared Variables
+      Deleting Variables, Functions, or Function Arguments
+      Duplicating Parameter Names
+      Octal literals e.g., `0123`
+      With Statement
+      Eval and Arguments
+      */
+    </script>
+  </body>
+</html>

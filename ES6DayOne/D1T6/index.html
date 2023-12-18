@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Display Page</title>
+  </head>
+  <body>
+    <h1>Tips for You</h1>
+
+    <!-- Button to display tips using for...of loop -->
+    <button onclick="displayTips()">Display Tips (for...of)</button>
+
+    <!-- Button to display tips using setInterval and generator -->
+    <button onclick="displayTipsInterval()">
+      Display Tips Every 3 Seconds
+    </button>
+
+    <script>
+      // Generator function to yield tips
+      function* tipGenerator() {
+        const tips = [
+          "Tip 1: Lorem ipsum dolor sit amet.",
+          "Tip 2: Consectetur adipiscing elit.",
+          "Tip 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Tip 4: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "Tip 5: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Tip 6: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "Tip 7: Curabitur pretium tincidunt lacus.",
+          "Tip 8: Nulla gravida orci a odio.",
+          "Tip 9: Nulla quis sem at nibh elementum imperdiet.",
+          "Tip 10: Duis sagittis ipsum.",
+        ];
+
+        for (const tip of tips) {
+          yield tip;
+        }
+      }
+
+      // Get reference to the buttons
+      const displayButton = document.querySelector("button");
+      const intervalButton = document.querySelectorAll("button")[1];
+
+      // Display tips using for...of loop
+      function displayTips() {
+        const tipsGenerator = tipGenerator();
+        for (const tip of tipsGenerator) {
+          alert(tip);
+        }
+      }
+
+      // Display tips using setInterval and generator
+      function displayTipsInterval() {
+        const tipsGenerator = tipGenerator();
+        const intervalId = setInterval(() => {
+          const { value, done } = tipsGenerator.next();
+          if (done) {
+            clearInterval(intervalId);
+          } else {
+            alert(value);
+          }
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

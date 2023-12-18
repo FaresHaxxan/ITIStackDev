@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Create a Set for student names
+      const studentSet = new Set();
+
+      // Add names to the Set
+      studentSet.add("Alice");
+      studentSet.add("Bob");
+      studentSet.add("Charlie");
+
+      // Try adding a repeated name
+      studentSet.add("Alice"); // This won't be added as it's a repeated value
+
+      // Print set values using spread operator
+      console.log("Set values using spread operator:", [...studentSet]);
+
+      // Print set values using for...of loop
+      console.log("Set values using for...of loop:");
+      for (const student of studentSet) {
+        console.log(student);
+      }
+    </script>
+  </body>
+</html>

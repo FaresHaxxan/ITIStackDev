@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+
+        eat() {
+          console.log(`${this.name} is eating.`);
+        }
+      }
+
+      class Dog extends Animal {
+        constructor(name, breed) {
+          super(name);
+          this.breed = breed;
+        }
+
+        bark() {
+          console.log(`${this.name} is barking.`);
+        }
+
+        // Method overriding
+        eat() {
+          console.log(`${this.name} is eating dog food.`);
+        }
+      }
+
+      // Creating instances
+      const myAnimal = new Animal("Generic Animal");
+      const myDog = new Dog("Buddy", "Golden Retriever");
+
+      // Using the eat method
+      myAnimal.eat(); // Output: Generic Animal is eating.
+      myDog.eat(); // Output: Buddy is eating dog food.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Sample array
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      // Arrow function for filtering odd numbers using Array.filter()
+      const oddNumbers = numbers.filter((num) => num % 2 !== 0);
+
+      console.log("Odd Numbers:", oddNumbers);
+
+      // Arrow function with Array.forEach() to print even values
+      numbers.forEach((num) => {
+        if (num % 2 === 0) {
+          console.log("Even Value:", num);
+        }
+      });
+
+      // Arrow function with Array.map() to print the square of each element
+      const squares = numbers.map((num) => num * num);
+
+      console.log("Squares:", squares);
+
+      // Explanation of arrow function and this context
+      const demoObject = {
+        regularFunction: function () {
+          console.log("Regular Function this:", this);
+        },
+        arrowFunction: () => {
+          console.log("Arrow Function this:", this);
+        },
+      };
+
+      demoObject.regularFunction(); // Regular Function this: [object Object]
+      demoObject.arrowFunction(); // Arrow Function this: Window (or global object in a browser)
+
+      /*Regarding the explanation of the arrow function and this context, the arrow function does not have its own this context. 
+      Instead, it inherits the this value from the surrounding lexical scope. 
+      In the demo, you can see that the arrow function within the demoObject prints the global object (Window in a browser environment) as its this value, 
+      whereas the regular function within the object prints the object itself. 
+      This behavior can be useful in certain scenarios, especially when dealing with callbacks and maintaining the correct this context.*/
+    </script>
+  </body>
+</html>

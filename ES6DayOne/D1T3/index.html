@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Sample array
+      const originalArray = [1, 2, 3, 4, 5];
+
+      // Duplicate the array using the spread operator
+      const duplicatedArray = [...originalArray];
+
+      console.log("Original Array:", originalArray);
+      console.log("Duplicated Array:", duplicatedArray);
+
+      // Modify the duplicated array without affecting the original array
+      duplicatedArray.push(6);
+
+      console.log("Original Array after modification:", originalArray);
+      console.log("Duplicated Array after modification:", duplicatedArray);
+
+      // Concatenate arrays using the spread operator
+      const newArray = [...originalArray, 7, 8, 9];
+
+      console.log("Concatenated Array:", newArray);
+    </script>
+  </body>
+</html>
