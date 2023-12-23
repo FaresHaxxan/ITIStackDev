@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises Example</title>
+  </head>
+  <body>
+    <h1 id="welcomeMessage">Welcome!</h1>
+    <img
+      id="userImage"
+      style="display: none"
+      src="https://placekitten.com/200/200"
+      alt="User Image"
+    />
+    <h2 id="thanksMessage" style="display: none">Thanks for visiting!</h2>
+
+    <script>
+      function delay(time) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, time);
+        });
+      }
+
+      function showWelcomeMessage() {
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        welcomeMessage.textContent = "Welcome!";
+      }
+
+      function showUserImage() {
+        const userImage = document.getElementById("userImage");
+        userImage.style.display = "block";
+      }
+
+      function showThanksMessage() {
+        const thanksMessage = document.getElementById("thanksMessage");
+        thanksMessage.style.display = "block";
+      }
+
+      function redirectToAnotherPage() {
+        // Redirect to another page (replace 'https://example.com' with the actual URL)
+        window.location.href = "https://example.com";
+      }
+
+      // Use promises to sequence the actions
+      delay(3000)
+        .then(showWelcomeMessage)
+        .then(() => delay(3000))
+        .then(showUserImage)
+        .then(() => delay(3000))
+        .then(showThanksMessage)
+        .then(() => delay(3000))
+        .then(redirectToAnotherPage)
+        .catch((error) => console.error("Error:", error));
+    </script>
+  </body>
+</html>
